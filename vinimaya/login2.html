@@ -1,0 +1,67 @@
+
+<?php  
+session_start();//session starts here  
+  
+?>  
+  
+<!Doctype html>
+<html>
+    <head>
+        <link href="http://localhost/vinimaya/login1.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>login form</title>
+    </head>
+
+<body>
+<div id="page-wrap">
+<h2>Login to Continue</h2>
+<div id="icon">
+<a href="http://localhost/vinimaya/page1.php" target="_blank"><i class="fa fa-home"></i></a>
+</div>
+<form   action="process.php" method="POST">
+   <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username">
+	<br/>
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password">
+    <br/><br/><br/>
+
+    <a href="http://localhost/vinimaya/loged%20user.html" target="_blank"><button type="button">Login</button></a>
+     <a href="http://localhost/vinimaya/page1.php" ><button>Cancel</button></a>
+     
+     
+	<br/>
+    </div>
+</form>
+
+</div>
+</body>
+</html>
+
+<?php  
+  
+include conection.php;  
+  
+if(isset($_POST['login']))  
+{  
+    $user_name=$_POST['username'];  
+    $password=$_POST['password'];  
+  
+    $check_user="select username,password from register WHERE username='$user_name'AND password='$password'";  
+  
+    $run=mysqli_query($link,$check_user);  
+  
+    if(mysqli_num_rows($run))  
+    {  
+        echo "<script>window.open('page2.php','_self')</script>";  
+  
+        $_SESSION['username']=$user_name;//here session is used and value of $user_email store in $_SESSION.  
+  
+    }  
+    else  
+    {  
+      echo "<script>alert('Email or password is incorrect!')</script>";  
+    }  
+}  
+?>  

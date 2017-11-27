@@ -1,0 +1,24 @@
+body
+{
+    background-color:yellowgreen;
+    text-align: center;
+    margin-top: 10%;
+}
+
+#page-wrap
+{
+    width:200px;
+}
+
+h2
+{
+    text-align: center;
+    color: navy;
+}
+
+button
+{
+    width:30%;
+    text-align: center;
+    padding:20px;
+}

@@ -1,0 +1,48 @@
+body
+{
+    background-color:yellowgreen;
+    color:black;
+    text-align: center;
+    margin-top: 10%;
+}
+
+#page-wrap {
+  text-align: center;
+  width: 400px;
+  margin: 0 auto;
+}
+
+
+input[type=text], input[type=password]
+ {
+    width: 70%;
+    padding: 15px 25px;
+    margin: 18px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    left:50%;
+}
+
+button {
+    background-color:;
+    color:black;
+    font-size:15px;
+    padding: 15px 20px;
+    margin:8px 5px 20px 10px;
+    margin-left:50px;
+    cursor: pointer;
+    width:50%;
+    align-content: center;
+}
+
+.container {
+    padding: 15px;
+}
+
+h2
+{
+    text-align: center;
+    color:navy;
+
+}
